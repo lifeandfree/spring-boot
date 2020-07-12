@@ -9,11 +9,11 @@ logging:
     ROOT: INFO
     ru.innopolis: DEBUG
 
-info:
-  app:
-    name: Actuator Demo Test
-    version: 0.0.1
-    description: Spring Boot Demo
+#info:
+#  app:
+#    name: Actuator Demo Test
+#    version: 0.0.1
+#    description: Spring Boot Demo
 
 management:
   endpoints:
