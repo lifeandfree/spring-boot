@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author lifeandfree
  */
 @RestController
-@Profile("local")
+//@Profile("local")
 public class Index {
 
     @RequestMapping("/index")

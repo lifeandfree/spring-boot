@@ -16,7 +16,7 @@
 //    public Authentication authenticate(Authentication authentication) throws AuthenticationException {
 //        if (authentication instanceof TokenAuthentication)
 //            return authentication;
-//        authentication.setAuthenticated(false);
+//        authentication.setAuthenticated(true);
 //        return authentication;
 //    }
 //}

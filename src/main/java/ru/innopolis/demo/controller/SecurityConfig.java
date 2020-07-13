@@ -18,36 +18,44 @@
 // *
 // * @author lifeandfree
 // */
-////@Configuration
-////@EnableWebSecurity
-////@EnableGlobalMethodSecurity(securedEnabled = true)
+//@Configuration
+//@EnableWebSecurity
+//@EnableGlobalMethodSecurity(securedEnabled = true)
 //public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //
-//    private AuthenticationManager authenticationManager;
+////    private AuthenticationManager authenticationManager;
 //    private AuthenticationEntryPoint authenticationEntryPointHandler;
 //
-//    public SecurityConfig(AuthenticationManager authenticationManager, AuthenticationEntryPoint authenticationEntryPointHandler) {
-//        this.authenticationManager = authenticationManager;
-//        this.authenticationEntryPointHandler = authenticationEntryPointHandler;
+//    public SecurityConfig() {
+////        this.authenticationManager = authenticationManager;
+////        this.authenticationEntryPointHandler = authenticationEntryPointHandler;
 //    }
 //
 //    @Override
 //    protected void configure(HttpSecurity http) throws Exception {
-//        http.csrf().disable().httpBasic().disable()
+//        http.csrf().disable()
+//                .httpBasic().disable()
+//                .formLogin().disable()
 //                .exceptionHandling()
-//                .authenticationEntryPoint(authenticationEntryPointHandler)
+//                .authenticationEntryPoint(authenticationEntryPointHandler())
 //                .and()
 //                .addFilterAt(authenticationTokenFilter(), UsernamePasswordAuthenticationFilter.class)
 //                .authorizeRequests().antMatchers("/swagger-**").permitAll();
 //    }
 //
-//    @Bean
+//    private AuthenticationEntryPoint authenticationEntryPointHandler() {
+//        return new AuthenticationEntryPointImpl();
+//    }
+//
+//    //    @Bean
 //    public TokenAuthFilter authenticationTokenFilter() {
-//        return new TokenAuthFilter("/**");
+//        TokenAuthFilter filter = new TokenAuthFilter("/**");
+//        filter.setAuthenticationManager(authenticationManager());
+//        return filter;
 //    }
 ////
 ////    @Bean
-////    public AuthenticationManager authenticationManager() {
-////        return new TokenAuthenticationManager();
-////    }
+//    public AuthenticationManager authenticationManager() {
+//        return new TokenAuthenticationManager();
+//    }
 //}
